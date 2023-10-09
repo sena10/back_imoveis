@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Imóveis</title>
+</head>
+<body>
+    <h1>Lista de Imóveis</h1>
+    <ul>
+        {% for imovel in imoveis %}
+            <li>
+                <img src="{{ imovel.foto }}" alt="{{ imovel.endereço }}">
+                <h2>{{ imovel.endereço }}</h2>
+                <p>Preço: {{ imovel.preço }}</p>
+                <p>Metros Quadrados: {{ imovel.metros_quadrados }}</p>
+                <p>Quartos: {{ imovel.quarto }}</p>
+                <p>Banheiros: {{ imovel.banheiro }}</p>
+                <p>Estacionamento: {{ imovel.estacionamento }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
