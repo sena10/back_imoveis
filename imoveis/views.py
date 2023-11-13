@@ -16,3 +16,7 @@ class ImovelDetail(generics.RetrieveUpdateDestroyAPIView):
 def page_list(request):
     imoveis = Imovel.objects.all()
     return render(request, 'page.html', {'imoveis': imoveis})
+
+def detalhe_list(request):
+    imoveis = Imovel.objects.all()
+    return render(request, 'detalhe.html', {'imoveis': imoveis})

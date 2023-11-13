@@ -1,0 +1,31 @@
+{% extends 'page.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Imobiliária Moderna</title>
+    <link rel="stylesheet" href="{% static 'stylee.css' %}">
+</head>
+<body>
+    
+    {% block content %}
+    <div class="property-list">
+        {% for imovel in imoveis %}
+            <div class="property-item">
+                <img class="property-image" src="{{ imovel.foto }}" alt="{{ imovel.endereço }}">
+                <div class="property-details">
+                    <p class="property-info">Endereço: {{ imovel.endereço }}</p>
+                    <p class="property-info">Preço: R$ {{ imovel.preço }}</p>
+                    <p class="property-info">Metros Quadrados: {{ imovel.metros_quadrados }} m²</p>
+                    <p class="property-info">Quartos: {{ imovel.quarto }}</p>
+                    <p class="property-info">Banheiros: {{ imovel.banheiro }}</p>
+                    <p class="property-info">Estacionamento: {{ imovel.estacionamento }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    {% endblock %}
+</body>
+</html>

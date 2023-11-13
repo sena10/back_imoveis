@@ -1,0 +1,42 @@
+/* Estilo para a lista de propriedades */
+.property-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 95px auto;
+    align-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;    
+}
+
+/* Estilo para cada item de propriedade */
+.property-item {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: auto;
+    
+}
+
+/* Estilo para a imagem da propriedade */
+.property-image {
+    height: 180px; /* Defina a altura desejada para todas as imagens */
+    border-radius: 8px;
+    object-fit: cover; /* Isso garante que a imagem cubra completamente a área especificada */
+}
+/* Estilo para os detalhes da propriedade */
+.property-details {
+    margin-top: 10px;
+}
+
+/* Estilo para informações específicas da propriedade */
+.property-info {
+    margin: 5px 0;
+}
+.property-image.small-image {
+    height: 480px; /* Ajuste a altura conforme necessário */
+    object-fit: cover;
+}   
